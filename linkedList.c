@@ -102,13 +102,18 @@ void reverseList() {
 
     }
 }
-void recursivePrint(struct Node*head) {
-    if(head!=NULL) {
-        printf("%d ",head->data);
-        recursivePrint(head->next);
+
+void recursiveList(struct Node*ptr) {
+    if(ptr->next==NULL) {
+        head=ptr;
+        return;
     }
-    
+    recursiveList(ptr->next);
+    struct Node*previousptr=ptr->next;
+    previousptr->next=ptr;
+    ptr->next=NULL;
 }
+
 
 int main() {
     int i,n,x;
@@ -127,8 +132,7 @@ int main() {
     insertatposition(14,2);
     print();
     deleteposition(1);
-    print(); 
-    reverseList();
     print();
-    recursivePrint(head);
+    recursiveList(head);
+    print();
 }   
