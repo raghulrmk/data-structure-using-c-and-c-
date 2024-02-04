@@ -103,7 +103,7 @@ void reverseList() {
     }
 }
 
-void recursiveList(struct Node*ptr) {
+void recursiveList(struct Node*ptr) { // reversing the linked list using recursive function;
     if(ptr->next==NULL) {
         head=ptr;
         return;
