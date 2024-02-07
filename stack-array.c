@@ -41,5 +41,5 @@ int main() {
     top();
     pop();
     top();
-    
+    check();
 }
