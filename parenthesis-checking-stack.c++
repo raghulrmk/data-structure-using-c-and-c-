@@ -1,3 +1,5 @@
+// Rules for the balanced parenthesis : last opened should be closed first;
+
 #include <iostream>
 #include <stack>
 #include <string>
